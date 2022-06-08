@@ -1,0 +1,20 @@
+img {
+  filter: drop-shadow(3px 3px 5px #a7a7a7);
+}
+
+.bx--resource-card--dark a.bx--tile {
+  background: #0f62fe;
+}
+
+.bx--resource-card--dark:hover a.bx--tile {
+  background: #0353e9;
+}
+
+a.bx--tile--clickable > div {
+  background: #0f62fe;
+  color: white;
+}
+
+a.bx--tile--clickable:hover > div {
+  background: #0353e9;
+}

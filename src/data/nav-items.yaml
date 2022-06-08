@@ -1,0 +1,9 @@
+- title: About
+  pages:
+    - path: /
+- title: Case studies
+  pages:
+    - path: /case-studies
+- title: People
+  pages:
+    - path: /people
