@@ -5,7 +5,7 @@ module.exports = {
     keywords:
       "deep search, pdf search, document search, corpus conversion, pdf search, knowledge graph",
   },
-  pathPrefix: `/CognitiveCore-Utilities/deepsearch-public-landing`,
+  pathPrefix: `/`,
   plugins: [
     {
       resolve: "gatsby-plugin-manifest",
