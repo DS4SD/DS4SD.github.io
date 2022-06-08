@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: "IBM Deep Search Homepage",
-    description: "A Gatsby theme for the carbon design system",
+    description: "Homepage of the Deep Search platform.",
     keywords:
       "deep search, pdf search, document search, corpus conversion, pdf search, knowledge graph",
   },
@@ -10,7 +10,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-manifest",
       options: {
-        name: "IBM Deep Search Homepage",
+        name: "IBM Deep Search",
         icon: "src/images/favicon.svg",
         short_name: "Deep Search",
         start_url: "/",
