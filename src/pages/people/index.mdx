@@ -1,7 +1,8 @@
-<PageDescription>
+import { Button } from "carbon-components-react";
+import { Email20 } from "@carbon/icons-react";
+import Persons from "./Persons";
 
-We are scientists and engineers at the Zürich laboratory of [IBM Research](https://research.ibm.com).
-We enjoy processing big data on even bigger compute clusters.
+<PageDescription>
 
 </PageDescription>
 
@@ -17,7 +18,12 @@ be it as interns, PhD students, or staff. Do you want to:
 - Solve complex, real-world problems?
 - Build scalable systems, beyond Python prototypes?
 
-[Mail us](mailto:deepsearch-core@zurich.ibm.com) your résumé and interests.
+<div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+  <Button renderIcon={Email20} href="mailto:deepsearch-core@zurich.ibm.com">
+    Contact us
+  </Button>
+  with your résumé and interests.
+</div>
 
 </Column>
 
@@ -34,3 +40,27 @@ be it as interns, PhD students, or staff. Do you want to:
 </Column>
 
 </Row>
+
+## Team
+
+<Persons />
+
+## Location
+
+We are based at the [IBM Research](https://research.ibm.com) Zürich laboratory in Switzerland. <a href="https://maps.google.com/maps?ll=47.314863,8.547492&z=10&t=m&hl=en-US&gl=US&mapclient=embed&q=S%C3%A4umerstrasse%204%208803%20R%C3%BCschlikon%20Switzerland">view map</a>
+
+<ImageGallery>
+
+<ImageGalleryImage alt="Zürich laboratory" title="Zürich laboratory" col={8}>
+
+![IBM Design](/images/lab-1.jpg)
+
+</ImageGalleryImage>
+
+<ImageGalleryImage  alt="Zürich laboratory at the lake" title="Zürich laboratory at the lake" col={8}>
+
+![IBM Cloud Logo](/images/lab-2.jpg)
+
+</ImageGalleryImage>
+
+</ImageGallery>
