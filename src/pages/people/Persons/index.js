@@ -67,7 +67,7 @@ const persons = [
     firstName: "Lucas",
     lastName: "Morin",
     code: "zurich-LUM",
-    imageCode: undefined,
+    imageCode: "10017",
   },
   {
     firstName: "Ahmed",
