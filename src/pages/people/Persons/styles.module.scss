@@ -1,0 +1,64 @@
+.persons {
+  display: flex;
+  flex-direction: row;
+  flex-flow: wrap;
+  gap: 2rem;
+}
+
+.card {
+  position: relative;
+  height: 6rem;
+  width: 18rem;
+
+  background: #262626;
+  text-decoration: none;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.card:hover {
+  background: #393939;
+}
+
+.card img {
+  max-width: 6rem;
+  flex: 0;
+  filter: none;
+}
+
+.card .noImg {
+  width: 6rem;
+  background-color: #c7c7c7;
+}
+
+.card svg {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  fill: white;
+}
+
+.name {
+  padding: 1rem;
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.firstName {
+  font-size: var(--cds-heading-01-font-size, 0.875rem);
+  font-weight: var(--cds-heading-01-font-weight, 600);
+  line-height: var(--cds-heading-01-line-height, 1.42857);
+  letter-spacing: var(--cds-heading-01-letter-spacing, 0.16px);
+  font-weight: 400;
+}
+
+.lastName {
+  font-size: var(--cds-productive-heading-03-font-size, 1.25rem);
+  font-weight: var(--cds-productive-heading-03-font-weight, 400);
+  line-height: var(--cds-productive-heading-03-line-height, 1.4);
+  letter-spacing: var(--cds-productive-heading-03-letter-spacing, 0);
+}
