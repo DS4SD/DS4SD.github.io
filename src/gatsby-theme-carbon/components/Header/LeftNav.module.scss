@@ -1,0 +1,24 @@
+// White theme
+
+nav.side-nav--white {
+  background-color: $carbon--white-0;
+  border-right: 1px solid $carbon--gray-20;
+}
+
+// Icons
+.outboundLink :global(.bx--side-nav__icon:not(.bx--side-nav__submenu-chevron)) {
+  display: inline-block;
+  flex: 0;
+  margin-right: 0;
+  height: 1rem;
+}
+
+.current-item span {
+  color: $ui-05;
+}
+
+// Moves icons to the right
+.outboundLink {
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
