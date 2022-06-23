@@ -49,7 +49,7 @@ const persons = [
     firstName: "Nikos",
     lastName: "Livathinos",
     code: "zurich-NLI",
-    imageCode: undefined,
+    imageCode: "9307",
   },
   {
     firstName: "Maxim",
