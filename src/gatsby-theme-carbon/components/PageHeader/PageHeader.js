@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import cx from "classnames";
 import * as styles from "./PageHeader.module.scss";
 
-const documentsConvertedUrl = "/documentsConverted.json";
+const documentsConvertedUrl =
+  "https://dp-prod-deepsearch-experience.s3.us-south.cloud-object-storage.appdomain.cloud/usage_stats/1234567890abcdefghijklmnopqrstvwyz123456/conversion_stats.json";
 
 const CustomPageHeader = ({ title, theme, tabs = [] }) => {
   const isHomePage = title.length === 0;
@@ -22,8 +23,8 @@ const CustomPageHeader = ({ title, theme, tabs = [] }) => {
       try {
         fetch(documentsConvertedUrl)
           .then((response) => response.json())
-          .then(({ documentsConverted }) =>
-            setDocumentsConverted(documentsConverted)
+          .then(({ inspector_transaction_count }) =>
+            setDocumentsConverted(inspector_transaction_count)
           );
       } catch (ex) {
         console.error("Failed to fetch converted documents:", ex);
