@@ -54,7 +54,7 @@ const CustomPageHeader = ({ title, theme, tabs = [] }) => {
               <span className={styles.documentCount}>
                 {documentsConverted.toLocaleString()}
               </span>
-              <span>documents parsed</span>
+              <span>live inspected documents</span>
             </div>
           )}
         </div>
