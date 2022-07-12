@@ -28,5 +28,20 @@ module.exports = {
         repository: "",
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-8WR82RYJQL"],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+        },
+        pluginConfig: {
+          head: false,
+          respectDNT: true,
+          exclude: [],
+        },
+      },
+    },
   ],
 };
