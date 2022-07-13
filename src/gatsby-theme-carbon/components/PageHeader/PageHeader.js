@@ -23,8 +23,8 @@ const CustomPageHeader = ({ title, theme, tabs = [] }) => {
       try {
         fetch(documentsConvertedUrl)
           .then((response) => response.json())
-          .then(({ inspector_transaction_count }) =>
-            setDocumentsConverted(inspector_transaction_count)
+          .then(({ inspector_transaction_count, pipeline_document_count }) =>
+            setDocumentsConverted(inspector_transaction_count + pipeline_document_count)
           );
       } catch (ex) {
         console.error("Failed to fetch converted documents:", ex);
@@ -54,7 +54,7 @@ const CustomPageHeader = ({ title, theme, tabs = [] }) => {
               <span className={styles.documentCount}>
                 {documentsConverted.toLocaleString()}
               </span>
-              <span>live inspected documents</span>
+              <span>documents converted</span>
             </div>
           )}
         </div>
