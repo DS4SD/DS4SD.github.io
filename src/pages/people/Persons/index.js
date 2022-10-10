@@ -46,7 +46,7 @@ const persons = [
     imageCode: undefined,
   },
   {
-    firstName: "Nikos",
+    firstName: "Nikolaos (Nikos)",
     lastName: "Livathinos",
     code: "zurich-NLI",
     imageCode: "9307",
@@ -80,6 +80,12 @@ const persons = [
     lastName: "Pfitzmann",
     code: "zurich-BPF",
     imageCode: "1831",
+  },
+  {
+    firstName: "Panagiotis (Panos)",
+    lastName: "Vagenas",
+    code: "zurich-PVA",
+    imageCode: "8938"
   },
   {
     firstName: "Valery",
