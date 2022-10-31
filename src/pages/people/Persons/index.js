@@ -64,6 +64,12 @@ const persons = [
     imageCode: "2332",
   },
   {
+    firstName: "Lokesh",
+    lastName: "Mishra",
+    code: "zurich-MIS",
+    imageCode: "10019"
+  },
+  {
     firstName: "Lucas",
     lastName: "Morin",
     code: "zurich-LUM",
