@@ -6,97 +6,115 @@ const persons = [
   {
     firstName: "Peter",
     lastName: "Staar",
-    code: "zurich-TAA",
-    imageCode: "4731",
+    code: "peter-staar",
+    imageCode: "1940",
+  },
+  {
+    firstName: "Diego",
+    lastName: "Antognini",
+    code: undefined,
+    imageCode: undefined,
   },
   {
     firstName: "Christoph",
     lastName: "Auer",
-    code: "zurich-CAU",
-    imageCode: "7717",
+    code: "christoph-auer",
+    imageCode: "2876",
   },
   {
     firstName: "Cesar",
     lastName: "Berrospi Ramis",
-    code: "zurich-CEB",
-    imageCode: "2868",
+    code: "cesar-berrospi-ramis",
+    imageCode: "992",
   },
   {
     firstName: "Michele",
     lastName: "Dolfi",
-    code: "zurich-DOL",
-    imageCode: "5849",
+    code: "michele-dolfi",
+    imageCode: "2877",
   },
   {
     firstName: "Kasper",
     lastName: "Dinkla",
-    code: "zurich-DKL",
-    imageCode: "9981",
+    code: "kasper-dinkla",
+    imageCode: "4530",
   },
   {
     firstName: "Francesco",
     lastName: "Fusco",
-    code: "zurich-FFU",
-    imageCode: "10015",
+    code: undefined,
+    imageCode: undefined,
+  },
+  {
+    firstName: "Shubham",
+    lastName: "Gupta",
+    code: undefined,
+    imageCode: undefined,
+  },
+  {
+    firstName: "Yusik",
+    lastName: "Kim",
+    code: "yusik-kim",
+    imageCode: "1009",
   },
   {
     firstName: "Viktor",
     lastName: "Kuropiatnyk",
-    code: "zurich-VKU",
+    code: undefined,
     imageCode: undefined,
   },
   {
-    firstName: "Nikolaos (Nikos)",
+    firstName: "Nikos",
     lastName: "Livathinos",
-    code: "zurich-NLI",
-    imageCode: "9307",
+    code: "nikos-livathinos",
+    imageCode: "779",
   },
   {
     firstName: "Maxim",
     lastName: "Lysak",
-    code: "zurich-MLY",
-    imageCode: undefined,
+    code: "maxim-lysak",
+    imageCode: "3797",
   },
   {
     firstName: "Ingmar",
     lastName: "Meijer",
-    code: "zurich-inm",
-    imageCode: "2332",
+    code: undefined,
+    imageCode: undefined,
   },
   {
     firstName: "Lokesh",
     lastName: "Mishra",
-    code: "zurich-MIS",
-    imageCode: "10019"
+    code: "lokesh-mishra",
+    imageCode: "924",
   },
   {
     firstName: "Lucas",
     lastName: "Morin",
-    code: "zurich-LUM",
-    imageCode: "10017",
+    code: "lucas-morin",
+    imageCode: "2634",
   },
   {
     firstName: "Ahmed",
     lastName: "Nassar",
-    code: "zurich-AHN",
-    imageCode: "9567",
+    code: "ahmed-nassar",
+    imageCode: "2439",
   },
   {
     firstName: "Birgit",
     lastName: "Pfitzmann",
-    code: "zurich-BPF",
-    imageCode: "1831",
+    code: "birgit-pfitzmann",
+    imageCode: "3223",
   },
   {
-    firstName: "Panagiotis (Panos)",
+    firstName: "Panos",
     lastName: "Vagenas",
-    code: "zurich-PVA",
-    imageCode: "8938"
+    code: "panos-vagenas",
+    imageCode: "902",
   },
   {
     firstName: "Valery",
     lastName: "Weber",
-    code: "zurich-?",
+    code: undefined,
     imageCode: undefined,
   },
 ];
@@ -106,18 +124,20 @@ const PersonList = () => (
     {persons.map(({ firstName, lastName, code, imageCode }) => (
       <a
         className={styles.card}
-        href={
-          code
-            ? `https://researcher.watson.ibm.com/researcher/view.php?person=${code}`
-            : undefined
-        }
+        href={code ? `https://research.ibm.com/people/${code}` : undefined}
       >
         {imageCode ? (
           <img
-            src={`https://s3.us.cloud-object-storage.appdomain.cloud/res-photos/${imageCode}.jpg`}
+            alt="photograph"
+            src={`https://dwzke5c1hcizv.cloudfront.net/image?url=https%3A%2F%2Fresearch-website-prod-ibmers-images.s3.us-east.cloud-object-storage.appdomain.cloud%2F${imageCode}&w=3840&q=75`}
           />
         ) : (
-          <div className={styles.noImg} />
+          <div className={styles.noImg}>
+            <img
+              alt="photograph"
+              src="/images/user-profile.svg"
+            />
+          </div>
         )}
 
         <div className={styles.name}>
@@ -125,7 +145,7 @@ const PersonList = () => (
           <div className={styles.lastName}>{lastName}</div>
         </div>
 
-        <ArrowRight20 />
+        {code && <ArrowRight20 />}
       </a>
     ))}
   </div>
