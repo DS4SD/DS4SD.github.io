@@ -1,23 +1,38 @@
-name: "Build GH pages"
+name: Publish on GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: [ dkl/webpage-revamp ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
-  deploy:
-    permissions:
-      contents: write
+  build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: Clone repository
+        uses: actions/checkout@v3
+
+      - name: Setup Deno environment
+        uses: denoland/setup-deno@v1
         with:
-          node-version: 16
-      - run: npm ci --legacy-peer-deps
-      - run: |
-          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          deno-version: v1.x
+
+      - name: Build site
+        run: deno task build
+      
+      - name: Setup Pages
+        uses: actions/configure-pages@v2
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v1
+        with:
+          path: '_site'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v1

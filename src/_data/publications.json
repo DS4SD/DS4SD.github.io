@@ -1,0 +1,62 @@
+[
+  {
+    "year": "2022",
+    "publications": [
+      {
+        "venue": "CVPR",
+        "title": "TableFormer: Table Structure Understanding with Transformers",
+        "url": "https://arxiv.org/abs/2203.01017"
+      },
+      {
+        "venue": "EMNLP",
+        "title": "Unsupervised Term Extraction for Highly Technical Domains",
+        "url": "https://arxiv.org/abs/2210.13118"
+      },
+      {
+        "venue": "IEEE CLOUD",
+        "title": "Delivering Document Conversion as a Cloud Service with High Throughput and Responsiveness",
+        "url": "https://arxiv.org/abs/2206.00785"
+      },
+      {
+        "venue": "KDD",
+        "title": "DocLayNet: A Large Human-Annotated Dataset for Document-Layout Analysis",
+        "url": "https://doi.org/10.1145/3534678.3539043"
+      }
+    ]
+  },
+  {
+    "year": "2021 - 2016",
+    "publications": [
+      {
+        "venue": "IAAI",
+        "title": "Robust PDF Document Conversion Using Recurrent Neural Networks",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/17777"
+      },
+      {
+        "venue": "Applied AI Letters",
+        "title": "Corpus Processing Service: A Knowledge Graph Platform to perform deep data exploration on corpora",
+        "url": "https://doi.org/10.1002/ail2.20"
+      },
+      {
+        "venue": "KDD",
+        "title": "Corpus Conversion Service: A Machine Learning Platform to Ingest Documents at Scale",
+        "url": "https://doi.org/10.1145/3219819.3219834"
+      },
+      {
+        "venue": "IPDPS",
+        "title": "Stochastic Matrix-Function Estimators: Scalable Big-Data Kernels with High Performance",
+        "url": "https://doi.org/10.1109/IPDPS.2016.34"
+      }
+    ]
+  },
+  {
+    "year": "",
+    "publications": [
+      {
+        "venue": "Submitted",
+        "title": "pNLP-Mixer: an Efficient all-MLP Architecture for Language",
+        "url": "https://arxiv.org/abs/2202.04350"
+      }
+    ]
+  }
+]

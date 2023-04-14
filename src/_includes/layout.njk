@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/styles/main.css">
+        <link rel="icon" href="/icons/logo.svg" type="image/svg+xml">
+        <title>{{ title }}</title>
+    </head>
+    <body>
+        <nav>
+            <div class="logo">
+                <img src="/icons/logo.svg"/> IBM
+                <b>Deep Search</b>
+            </div>
+            <a href="#overview">
+                Overview
+            </a>
+            <a href="#toolkit">
+                Toolkit
+            </a>
+            <a href="#publications">
+                Publications
+            </a>
+            <a href="#people">
+                People
+            </a>
+            <a class="shift-right" href="mailto:deepsearch-core@zurich.ibm.com">
+                <img src="/icons/email.svg"/><span>Contact</span>
+            </a>
+            <a href="https://github.com/DS4SD">
+                <img src="/icons/github.svg"/><span>GitHub</span>
+            </a>
+        </nav>
+        <article>
+            {{ content | safe }}
+        </article>
+        <footer>
+            <img src="/icons/ibm.svg"/>
+            <div>
+                <a href="https://ibm.com/privacy">Privacy</a>
+                <a href="https://ibm.com/legal">Terms of use</a>
+                <a href="https://ibm.com">IBM.com</a>
+            </div>
+            <div>Copyright © 2023 IBM</div>
+        </footer>
+        <aside>
+            <p>
+                Deep Search is offered commercially as-a-service. Try out our public system for free and
+                <a href="mailto:deepsearch-core@zurich.ibm.com">contact us</a>
+                for a full access evaluation.
+            </p>
+            <p class="counter">
+                So far
+                <span id="conversion-count"></span>
+                documents have been converted by our public system.
+            </p>
+            <a class="button" href="https://deepsearch-experience.res.ibm.com">
+                Try Deep Search <img src="/icons/arrow-right.svg"/>
+            </a>
+        </aside>
+        <script>
+            {# Periodically fetch the number of converted documents.#}
+            window.onload = function () {
+                const counterUrl = `https://dp-prod-deepsearch-experience.s3.us-south.cloud-object-storage.appdomain.cloud/usage_stats/1234567890abcdefghijklmnopqrstvwyz123456/conversion_stats.json`;
+                const counter = document.getElementById("conversion-count");
+                setInterval(updateDocumentsConverted, 60000);
+                updateDocumentsConverted();
+                function updateDocumentsConverted() {
+                    try {
+                        fetch(counterUrl).then((response) => response.json()).then(({inspector_transaction_count, pipeline_document_count}) => {
+                            counter.innerText = (inspector_transaction_count + pipeline_document_count).toLocaleString();
+                        });
+                    } catch (ex) {
+                        console.error("Failed to fetch converted documents:", ex);
+                    }
+                }
+            };
+        </script>
+    </body>
+</html>
