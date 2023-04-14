@@ -2,7 +2,8 @@ name: Publish on GitHub Pages
 
 on:
   push:
-    branches: [ dkl/webpage-revamp ]
+    branches:
+      - main
 
 permissions:
   contents: read
