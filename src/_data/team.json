@@ -1,0 +1,102 @@
+[
+  {
+    "firstName": "Peter",
+    "lastName": "Staar",
+    "code": "peter-staar",
+    "imageCode": "1940"
+  },
+  {
+    "firstName": "Diego",
+    "lastName": "Antognini"
+  },
+  {
+    "firstName": "Christoph",
+    "lastName": "Auer",
+    "code": "christoph-auer",
+    "imageCode": "2876"
+  },
+  {
+    "firstName": "Cesar",
+    "lastName": "Berrospi Ramis",
+    "code": "cesar-berrospi-ramis",
+    "imageCode": "992"
+  },
+  {
+    "firstName": "Luca",
+    "lastName": "Buratti"
+  },
+  {
+    "firstName": "Michele",
+    "lastName": "Dolfi",
+    "code": "michele-dolfi",
+    "imageCode": "2877"
+  },
+  {
+    "firstName": "Kasper",
+    "lastName": "Dinkla",
+    "code": "kasper-dinkla",
+    "imageCode": "4530"
+  },
+  {
+    "firstName": "Francesco",
+    "lastName": "Fusco"
+  },
+  {
+    "firstName": "Shubham",
+    "lastName": "Gupta"
+  },
+  {
+    "firstName": "Yusik",
+    "lastName": "Kim",
+    "code": "yusik-kim",
+    "imageCode": "1009"
+  },
+  {
+    "firstName": "Viktor",
+    "lastName": "Kuropiatnyk"
+  },
+  {
+    "firstName": "Nikos",
+    "lastName": "Livathinos",
+    "code": "nikos-livathinos",
+    "imageCode": "779"
+  },
+  {
+    "firstName": "Maksym",
+    "lastName": "Lysak",
+    "code": "maxim-lysak",
+    "imageCode": "3797"
+  },
+  {
+    "firstName": "Ingmar",
+    "lastName": "Meijer"
+  },
+  {
+    "firstName": "Lokesh",
+    "lastName": "Mishra",
+    "code": "lokesh-mishra",
+    "imageCode": "924"
+  },
+  {
+    "firstName": "Lucas",
+    "lastName": "Morin",
+    "code": "lucas-morin",
+    "imageCode": "2634"
+  },
+  {
+    "firstName": "Ahmed",
+    "lastName": "Nassar",
+    "code": "ahmed-nassar",
+    "imageCode": "2439"
+  },
+  {
+    "firstName": "Panos",
+    "lastName": "Vagenas",
+    "code": "panos-vagenas",
+    "imageCode": "902"
+  },
+  {
+    "firstName": "Valery",
+    "lastName": "Weber"
+  }
+]

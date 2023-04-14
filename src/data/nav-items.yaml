@@ -1,8 +1,0 @@
-# This sets the page titles and the bottom navigation buttons.
-# The side nav has custom links.
-- title: Case studies
-  pages:
-    - path: /case-studies
-- title: People
-  pages:
-    - path: /people

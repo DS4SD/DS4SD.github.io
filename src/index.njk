@@ -1,0 +1,186 @@
+---
+title: IBM Deep Search
+---
+
+<header id="overview">
+    <h1>Deep Search</h1>
+    <p>
+        Deep Search leverages state-of-the-art AI methods to continuously
+        <a href="#collect">collect</a>,
+        <a href="#convert">convert</a>,
+        <a href="#enrich">enrich</a>, and
+        <a href="#link">link</a>
+        large document collections. You can use it for both
+        <b>public and proprietary PDF documents</b>.
+    </p>
+</header>
+<section>
+    <h2>Overview</h2>
+    <p>
+        Deep Search
+        <b>converts unstructured PDF documents</b>
+        into structured JSON files with accuracy and ease. It enables you to automate knowledge extraction as well as to
+        fine-tune your proprietary
+        <b>Foundational Models</b>
+        and
+        <b>Large Language Models</b>. We have already converted and collected the most common open-access repositories of
+            technical documents for you to browse and search with ease. In the same way, you can point Deep Search to your
+            proprietary document collections to create an
+        <b>Enterprise Search</b>
+        service.
+    </p>
+    <video src="/movies/search.mp4" controls loop autoplay></video>
+    <h3 id="collect">Collect</h3>
+    <p>
+        Deep Search comes pre-loaded with millions of standard technical documents from many public data sources. We adhere to
+        all licensing and only provide sources with permissive, open-access licenses. These sources are accessible after
+        explicit license confirmation by the user.
+    </p>
+    <p>
+        Document collections are stored and indexed such that you can search and retrieve any document according to their
+        contents, down to the values and physical units in tables. These large collections of documents are processed quickly
+        and concurrently on scalable cloud infrastructure.
+    </p>
+    <div class="collect-sources">
+        <div>
+            <img src="/icons/patent.svg"/>
+            <div>
+                <b>Patents</b>
+                from
+                <ul>
+                    <li>USA</li>
+                    <li>Europe</li>
+                    <li>Japan</li>
+                    <li>Korea</li>
+                    <li>China</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <img src="/icons/publication.svg"/>
+            <div>
+                <b>Open-Access Publications</b>
+                <ul>
+                    <li>SemanticScholar</li>
+                    <li>CrossRef</li>
+                    <li>PLOS</li>
+                    <li>MDPI</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <img src="/icons/repository.svg"/>
+            <div>
+                <b>Public Repositories</b>
+                <ul>
+                    <li>arXiv</li>
+                    <li>PubMed-Central</li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <img src="/icons/news.svg"/>
+            <div>
+                <b>News</b>
+                articles that are curated and related to technical topics
+            </div>
+        </div>
+    </div>
+    <h3 id="convert">Convert</h3>
+    <p>
+        Deep Search converts large collections of PDF documents, such as scientific publications and patents, into JSON files.
+        Our state-of-the-art AI detects and delimits document objects that contain information, such as paragraphs and tables.
+        This information is then extracted from the objects, such as text from paragraphs and cells from tables.
+    </p>
+    <h3 id="enrich">Enrich</h3>
+    <p>
+        After parsing a document for its content, Deep Search enriches it. Paragraphs of text are passed through natural
+        language models. These models identify language structures such as sentences and terms, which are then classified into
+        entity types such as a
+        <i>country</i>
+        or a
+        <i>physical property</i>
+        of a
+        <i>material</i>. Likewise, image objects are detected and interpreted by computer vision
+            models.
+    </p>
+    <h3 id="link">Link</h3>
+    <p>
+        Use Deep Search to interlink your document collections into knowledge graphs. Knowledge graphs relate the entity types
+        that have been discovered across documents. You can then query a graph to answer analytical questions that go beyond
+        searching for keywords. For example:
+    </p>
+    <blockquote>
+        For each material type that is mentioned in my collection of scientific papers, which of its physical properties have
+        been tested and under which conditions?
+    </blockquote>
+    <blockquote>
+        For each company that is mentioned in my collection of annual reports, what was its total revenue per
+        year?
+    </blockquote>
+</section>
+<section id="toolkit">
+    <h2>Toolkit</h2>
+    <p>
+        Deep Search can be accessed programmatically to:
+        <ul>
+            <li>Convert documents in bulk.</li>
+            <li>Build document analysis tools on top.</li>
+            <li>Integrate with automation workflows.</li>
+        </ul>
+        Our
+        <a href="https://github.com/DS4SD/deepsearch-toolkit">Python Toolkit</a>
+        provides these functionalities both as a client and library.
+    </p>
+</section>
+<section id="publications">
+    <h2>Publications</h2>
+    {% for batch in publications %}
+        <h3>{{ batch.year }}</h3>
+        <div class="publications">
+            {% for publication in batch.publications %}
+                <a href="{{ publication.url }}">
+                    <div class="venue">{{ publication.venue }}</div>
+                    {{ publication.title }}
+                </a>
+            {% endfor %}
+        </div>
+    {% endfor %}
+</section>
+<section id="people">
+    <h2>People</h2>
+    <p>
+        At
+        <a href="https://research.ibm.com">IBM Research</a>
+        we are always looking for scientists and engineers, be it as interns, PhD students, or staff.
+        <a href="mailto:deepsearch-core@zurich.ibm.com">Contact us</a>
+        with your résumé and interests.
+    </p>
+    <h3>Team</h3>
+    <div class="team">
+        {% for person in team %}
+            <a {% if person.code %} href="https://research.ibm.com/people/{{ person.code }}" {% endif %}>
+                {% if person.imageCode %}
+                    <img
+                        alt="photograph"
+                        src="https://dwzke5c1hcizv.cloudfront.net/image?url=https%3A%2F%2Fresearch-website-prod-ibmers-images.s3.us-east.cloud-object-storage.appdomain.cloud%2F{{
+                            person.imageCode }}&w=3840&q=75"/>
+                {% endif %}
+                <div>
+                    <div>{{ person.firstName }}</div>
+                    <b>{{ person.lastName }}</b>
+                </div>
+            </a>
+        {% endfor %}
+    </div>
+    <h3>Locations</h3>
+    <p>
+        We are based at laboratories in:
+        <ul>
+            <li><a href="https://goo.gl/maps/CDB5oSPWdiEnExFu9">Zürich - Switzerland</a></li>
+            <li><a href="https://www.google.com/maps/place/IBM+France/@48.9028385,2.2494001,12.97z/data=!4m6!3m5!1s0x47e66599b9cc6171:0x7573708905fa19a9!8m2!3d48.9066209!4d2.2620713!16s%2Fg%2F1tdp8y5w">Paris - France</a></li>
+        </ul>
+    </p>
+</section>
+<img class="zurich" src="/images/zurich.jpg"/>
+<img class="paris" src="/images/paris.jpg" title="By Dimitri Destugues, Licensed CC BY-SA 3.0"/>
