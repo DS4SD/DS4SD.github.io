@@ -21,6 +21,8 @@ html {
 }
 
 body {
+  --content-width: 30rem;
+  
   background-color: var(--cds-background);
 
   font-size: var(--cds-body-long-02-font-size);
@@ -235,7 +237,7 @@ aside a {
 h2,
 p,
 blockquote {
-  max-width: 30rem;
+  max-width: var(--content-width);
 }
 
 h1 {
@@ -395,15 +397,15 @@ a.button.inverse-ghost:hover {
 
 /* Collect. */
 .collect-sources {
+  max-width: var(--content-width);
   margin: 2rem 0;
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
 }
 
 .collect-sources > div {
   width: 13rem;
-  margin: 0 1rem;
 
   display: flex;
   flex-direction: row;
@@ -509,13 +511,48 @@ a.button.inverse-ghost:hover {
   flex-direction: column;
 }
 
-img.zurich {
-  margin: 3rem 0 0 auto;
-  max-width: calc(min(100%, 40rem));
+/* Locations. */
+.locations {
+  margin: 1rem 0;
+
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 1rem;
 }
 
-img.paris {
-  width: 100%;
-  border-top: 1px solid var(--cds-border-subtle);
-  border-bottom: 1px solid var(--cds-border-subtle);
+.locations > div {
+  display: flex;
+  flex-direction: column;
+
+  background-color: var(--cds-background-inverse);
+  color: var(--cds-text-inverse);
+}
+
+.locations > div > img {
+  max-height: 18rem;
+}
+
+.locations > div > div {
+  margin-left: 1rem;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+.locations > div > div > a {
+  margin-left: auto;
+  background-color: var(--cds-layer-selected-disabled);
+}
+
+.locations > div > div > a > img {
+  width: 3rem;
+  height: 3rem;
+  background-color: var(--cds-layer);
+}
+
+.locations > div > div > a > img:hover {
+  background-color: var(--cds-layer-hover);
 }
