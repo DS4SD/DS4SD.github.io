@@ -29,17 +29,14 @@ title: IBM Deep Search
         <b>Enterprise Search</b>
         service.
     </p>
-    <video src="/movies/search.mp4" controls loop autoplay></video>
+    <div>
+        <video src="/movies/search.mp4" controls loop autoplay></video>
+    </div>
     <h3 id="collect">Collect</h3>
     <p>
         Deep Search comes pre-loaded with millions of standard technical documents from many public data sources. We adhere to
         all licensing and only provide sources with permissive, open-access licenses. These sources are accessible after
         explicit license confirmation by the user.
-    </p>
-    <p>
-        Document collections are stored and indexed such that you can search and retrieve any document according to their
-        contents, down to the values and physical units in tables. These large collections of documents are processed quickly
-        and concurrently on scalable cloud infrastructure.
     </p>
     <div class="collect-sources">
         <div>
@@ -86,6 +83,11 @@ title: IBM Deep Search
             </div>
         </div>
     </div>
+    <p>
+        Document collections are stored and indexed such that you can search and retrieve any document according to their
+        contents, down to the values and physical units in tables. These large collections of documents are processed quickly
+        and concurrently on scalable cloud infrastructure.
+    </p>
     <h3 id="convert">Convert</h3>
     <p>
         Deep Search converts large collections of PDF documents, such as scientific publications and patents, into JSON files.
@@ -102,7 +104,7 @@ title: IBM Deep Search
         <i>physical property</i>
         of a
         <i>material</i>. Likewise, image objects are detected and interpreted by computer vision
-            models.
+                                    models.
     </p>
     <h3 id="link">Link</h3>
     <p>
@@ -123,21 +125,23 @@ title: IBM Deep Search
     <h2>Toolkit</h2>
     <p>
         Deep Search can be accessed programmatically to:
-        <ul>
-            <li>Convert documents in bulk.</li>
-            <li>Build document analysis tools on top.</li>
-            <li>Integrate with automation workflows.</li>
-        </ul>
-        Our
-        <a href="https://github.com/DS4SD/deepsearch-toolkit">Python Toolkit</a>
-        provides these functionalities both as a client and library.
+    </p>
+    <ul>
+        <li>Convert documents in bulk.</li>
+        <li>Build document analysis tools on top.</li>
+        <li>Integrate with automation workflows.</li>
+    </ul>
+    <p>
+        Take a look at the
+        <a href="https://github.com/DS4SD/deepsearch-toolkit">Deep Search Toolkit</a>, our Python development kit and command
+                                    line interface.
     </p>
 </section>
 <section id="publications">
     <h2>Publications</h2>
     {% for batch in publications %}
         <h3>{{ batch.year }}</h3>
-        <div class="publications">
+        <div class="publications filling">
             {% for publication in batch.publications %}
                 <a href="{{ publication.url }}">
                     <div class="venue">{{ publication.venue }}</div>
@@ -157,7 +161,7 @@ title: IBM Deep Search
         with your résumé and interests.
     </p>
     <h3>Team</h3>
-    <div class="team">
+    <div class="team filling">
         {% for person in team %}
             <a {% if person.code %} href="https://research.ibm.com/people/{{ person.code }}" {% endif %}>
                 {% if person.imageCode %}
@@ -174,13 +178,21 @@ title: IBM Deep Search
         {% endfor %}
     </div>
     <h3>Locations</h3>
-    <p>
-        We are based at laboratories in:
-        <ul>
-            <li><a href="https://goo.gl/maps/CDB5oSPWdiEnExFu9">Zürich - Switzerland</a></li>
-            <li><a href="https://www.google.com/maps/place/IBM+France/@48.9028385,2.2494001,12.97z/data=!4m6!3m5!1s0x47e66599b9cc6171:0x7573708905fa19a9!8m2!3d48.9066209!4d2.2620713!16s%2Fg%2F1tdp8y5w">Paris - France</a></li>
-        </ul>
-    </p>
+    <div class="locations filling">
+        <div>
+            <img class="zurich" src="/images/zurich.jpg"/>
+            <div>
+                Zürich
+                <b>Switzerland</b>
+                <a href="https://goo.gl/maps/CDB5oSPWdiEnExFu9"><img src="/icons/location.svg"/> </a>
+            </div>
+        </div>
+        <div>
+            <img class="paris" src="/images/paris.jpg"/>
+            <div>Paris
+                <b>France</b>
+                <a href="https://goo.gl/maps/QP86noMQSm8rP75r7"><img src="/icons/location.svg"/> </a>
+            </div>
+        </div>
+    </div>
 </section>
-<img class="zurich" src="/images/zurich.jpg"/>
-<img class="paris" src="/images/paris.jpg" title="By Dimitri Destugues, Licensed CC BY-SA 3.0"/>
