@@ -38,11 +38,6 @@ title: IBM Deep Search
         all licensing and only provide sources with permissive, open-access licenses. These sources are accessible after
         explicit license confirmation by the user.
     </p>
-    <p>
-        Document collections are stored and indexed such that you can search and retrieve any document according to their
-        contents, down to the values and physical units in tables. These large collections of documents are processed quickly
-        and concurrently on scalable cloud infrastructure.
-    </p>
     <div class="collect-sources">
         <div>
             <img src="/icons/patent.svg"/>
@@ -88,6 +83,11 @@ title: IBM Deep Search
             </div>
         </div>
     </div>
+    <p>
+        Document collections are stored and indexed such that you can search and retrieve any document according to their
+        contents, down to the values and physical units in tables. These large collections of documents are processed quickly
+        and concurrently on scalable cloud infrastructure.
+    </p>
     <h3 id="convert">Convert</h3>
     <p>
         Deep Search converts large collections of PDF documents, such as scientific publications and patents, into JSON files.
@@ -141,7 +141,7 @@ title: IBM Deep Search
     <h2>Publications</h2>
     {% for batch in publications %}
         <h3>{{ batch.year }}</h3>
-        <div class="publications">
+        <div class="publications filling">
             {% for publication in batch.publications %}
                 <a href="{{ publication.url }}">
                     <div class="venue">{{ publication.venue }}</div>
@@ -161,7 +161,7 @@ title: IBM Deep Search
         with your résumé and interests.
     </p>
     <h3>Team</h3>
-    <div class="team">
+    <div class="team filling">
         {% for person in team %}
             <a {% if person.code %} href="https://research.ibm.com/people/{{ person.code }}" {% endif %}>
                 {% if person.imageCode %}
@@ -178,7 +178,7 @@ title: IBM Deep Search
         {% endfor %}
     </div>
     <h3>Locations</h3>
-    <div class="locations">
+    <div class="locations filling">
         <div>
             <img class="zurich" src="/images/zurich.jpg"/>
             <div>
