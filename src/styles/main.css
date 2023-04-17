@@ -102,24 +102,10 @@ article {
 }
 
 article video {
-  max-width: 100%;
-  max-height: 33rem;
+  width: 100%;
   margin-top: 2rem;
-
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
 }
-
-@media screen and (min-width: 90rem) {
-  article video {
-    position: absolute;
-    top: 2rem;
-    left: 36rem;
-    max-width: calc(100% - 39rem);
-
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
-  }
-}
-
 footer {
   padding: 2rem 3rem;
   background-color: var(--cds-icon-primary);
@@ -154,7 +140,7 @@ footer div a {
   nav,
   article,
   footer {
-    margin-right: 22rem;
+    margin-right: 30%;
   }
 }
 
@@ -167,6 +153,8 @@ aside {
   z-index: 1000;
   padding: 6rem 3rem;
 
+  color: var(--cds-text-inverse);
+  background-color: var(--cds-background-inverse);
   border-top: 1px solid var(--cds-border-subtle);
 
   display: flex;
@@ -178,7 +166,7 @@ aside {
 @media screen and (min-width: 75rem) {
   aside {
     position: fixed;
-    width: 22rem;
+    width: 30%;
     left: unset;
     right: 0;
     top: 0;
@@ -190,20 +178,22 @@ aside {
   }
 }
 
-aside p {
-  margin: 0;
+aside > * {
+  width: 100%;
+  max-width: 22rem;
+  margin: auto;
+}
+
+aside > p {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: var(--cds-body-long-01-font-size);
   font-weight: var(--cds-body-long-01-font-weight);
   line-height: var(--cds-body-long-01-line-height);
   letter-spacing: var(--cds-body-long-01-letter-spacing);
 }
 
-aside {
-  color: var(--cds-text-inverse);
-  background-color: var(--cds-background-inverse);
-}
-
-aside .counter > span {
+aside > .counter > span {
   color: #e6f3ff;
   font-size: 1.5rem;
   line-height: 2.5rem;
@@ -211,7 +201,7 @@ aside .counter > span {
     0 0 1rem #0084ff, 0 0 1.25rem #0084ff, 0 0 1.75rem #0084ff, 0 0 2rem #0084ff;
 }
 
-aside a {
+aside > a {
   margin-top: 2rem;
 }
 
@@ -223,22 +213,64 @@ aside a {
     justify-content: flex-end;
   }
 
-  aside a {
+  aside > a {
     margin: 0;
     width: 12rem;
   }
 
-  aside .counter {
+  aside > .counter {
     display: none;
   }
 }
 
 /* Typography. */
-h2,
-p,
-blockquote {
-  max-width: var(--content-width);
+header,
+section {
+  position: relative;
+  padding: 3rem;
+  width: 100%;
 }
+
+header > *,
+section > * {
+  max-width: var(--content-width);
+  margin: 0 auto;
+}
+
+header {
+  position: relative;
+  color: var(--cds-text-inverse);
+  background-color: var(--cds-background-inverse);
+
+  font-size: var(--cds-expressive-heading-03-font-size);
+  font-weight: var(--cds-expressive-heading-03-font-weight);
+  line-height: var(--cds-expressive-heading-03-line-height);
+  letter-spacing: var(--cds-expressive-heading-03-letter-spacing);
+}
+
+/* header::after {
+  content: "";
+
+  position: absolute;
+  left: 42rem;
+  right: 0;
+  top: 0;
+  bottom: 0;
+
+  filter: brightness(75%);
+
+  background-image: url("/images/library.jpg"),
+    linear-gradient(
+      90deg,
+      var(--cds-background-inverse),
+      var(--cds-background-inverse),
+      transparent
+    );
+  background-repeat: no-repeat;
+  background-attachment: local;
+  background-size: cover;
+  background-position: right;
+} */
 
 h1 {
   margin-bottom: calc(1.5rem + 2vw);
@@ -265,48 +297,6 @@ h3 {
   letter-spacing: var(--cds-expressive-heading-02-letter-spacing);
 }
 
-header,
-section {
-  position: relative;
-  padding: 3rem;
-  width: 100%;
-}
-
-header {
-  position: relative;
-  color: var(--cds-text-inverse);
-  background-color: var(--cds-background-inverse);
-
-  font-size: var(--cds-expressive-heading-03-font-size);
-  font-weight: var(--cds-expressive-heading-03-font-weight);
-  line-height: var(--cds-expressive-heading-03-line-height);
-  letter-spacing: var(--cds-expressive-heading-03-letter-spacing);
-}
-
-header::after {
-  content: "";
-
-  position: absolute;
-  left: 42rem;
-  right: 0;
-  top: 0;
-  bottom: 0;
-
-  filter: brightness(75%);
-
-  background-image: url("/images/library.jpg"),
-    linear-gradient(
-      90deg,
-      var(--cds-background-inverse),
-      var(--cds-background-inverse),
-      transparent
-    );
-  background-repeat: no-repeat;
-  background-attachment: local;
-  background-size: cover;
-  background-position: right;
-}
-
 aside a,
 header a {
   color: var(--cds-link-inverse);
@@ -316,13 +306,16 @@ section:nth-child(even) {
   background-color: var(--cds-layer);
 }
 
-p {
-  margin: 0.5rem 0;
+p,
+ol,
+ul {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 ol,
 ul {
-  margin: 0.5rem 0 0.5rem 1.5rem;
+  padding-left: 2rem;
   list-style-type: square;
 }
 
@@ -331,7 +324,7 @@ li {
 }
 
 blockquote {
-  margin: 1rem;
+  padding: 1rem;
   font-style: italic;
 }
 
@@ -398,7 +391,8 @@ a.button.inverse-ghost:hover {
 /* Collect. */
 .collect-sources {
   max-width: var(--content-width);
-  margin: 2rem 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
   gap: 3rem;
@@ -513,7 +507,8 @@ a.button.inverse-ghost:hover {
 
 /* Locations. */
 .locations {
-  margin: 1rem 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 
   display: flex;
   flex-wrap: wrap;
@@ -543,16 +538,17 @@ a.button.inverse-ghost:hover {
 }
 
 .locations > div > div > a {
-  margin-left: auto;
-  background-color: var(--cds-layer-selected-disabled);
-}
-
-.locations > div > div > a > img {
   width: 3rem;
   height: 3rem;
+  margin-left: auto;
   background-color: var(--cds-layer);
 }
 
-.locations > div > div > a > img:hover {
+.locations > div > div > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+.locations > div > div > a:hover {
   background-color: var(--cds-layer-hover);
 }
