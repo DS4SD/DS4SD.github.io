@@ -23,7 +23,9 @@
   },
   {
     "firstName": "Luca",
-    "lastName": "Buratti"
+    "lastName": "Buratti",
+    "code": "luca-buratti--1",
+    "imageCode": "15089"
   },
   {
     "firstName": "Michele",
@@ -55,7 +57,9 @@
   },
   {
     "firstName": "Viktor",
-    "lastName": "Kuropiatnyk"
+    "lastName": "Kuropiatnyk",
+    "code": "viktor-kuropiatnyk",
+    "imageCode": "778"
   },
   {
     "firstName": "Nikos",
@@ -71,7 +75,9 @@
   },
   {
     "firstName": "Ingmar",
-    "lastName": "Meijer"
+    "lastName": "Meijer",
+    "code": "ingmar-meijer",
+    "imageCode": "1200"
   },
   {
     "firstName": "Lokesh",
