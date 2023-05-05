@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  --content-width: 30rem;
+  --content-width: 35rem;
 
   background-color: var(--cds-background);
 
@@ -47,8 +47,8 @@ nav {
 
 nav div,
 nav a {
-  min-width: 6rem;
   padding: 0 1rem;
+
   font-size: 0.875rem;
   color: var(--cds-text);
   text-decoration: none;
@@ -59,12 +59,13 @@ nav a {
   gap: 0.25rem;
 }
 
-nav a:hover {
-  background-color: var(--cds-layer-hover);
+nav > a {
+  flex: 1;
+  max-width: 6rem;
 }
 
-nav a img {
-  margin-right: 0.25rem;
+nav > a:hover {
+  background-color: var(--cds-layer-hover);
 }
 
 nav div:first-child {
@@ -78,8 +79,12 @@ nav .logo > img {
   height: 1.5rem;
 }
 
-.shift-right {
+.actions {
   margin-left: auto;
+}
+
+.actions img {
+  margin-right: 0.25rem;
 }
 
 @media screen and (max-width: 75rem) {
@@ -141,118 +146,25 @@ footer div a {
   text-decoration: underline;
 }
 
-@media screen and (min-width: 75rem) {
-  nav,
-  article,
-  footer {
-    margin-right: 30%;
-  }
-}
-
-/* Page side layout. */
-aside {
-  position: sticky;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1000;
-  padding: 6rem 3rem;
-
-  color: var(--cds-text-inverse);
-  background-color: var(--cds-background-inverse);
-  border-top: 1px solid var(--cds-border-subtle);
-
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  gap: 1rem;
-}
-
-@media screen and (min-width: 75rem) {
-  aside {
-    position: fixed;
-    width: 30%;
-    left: unset;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    z-index: 1000;
-
-    border-top: none;
-    border-left: 1px solid var(--cds-border-subtle);
-  }
-}
-
-aside > * {
-  width: 100%;
-  max-width: 22rem;
-  margin: auto;
-}
-
-aside > p {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: var(--cds-body-long-01-font-size);
-  font-weight: var(--cds-body-long-01-font-weight);
-  line-height: var(--cds-body-long-01-line-height);
-  letter-spacing: var(--cds-body-long-01-letter-spacing);
-}
-
-aside > .counter > span {
-  color: #e6f3ff;
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  text-shadow: 0 0 0.25rem #cce6ff, 0 0 0.5rem #80c1ff, 0 0 0.75rem #80c1ff,
-    0 0 1rem #0084ff, 0 0 1.25rem #0084ff, 0 0 1.75rem #0084ff, 0 0 2rem #0084ff;
-}
-
-aside > a {
-  margin-top: 2rem;
-}
-
-@media screen and (max-width: 75rem) {
-  aside {
-    padding: 1rem;
-    flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
-  }
-
-  aside > a {
-    margin: 0;
-    width: 12rem;
-  }
-
-  aside > .counter {
-    display: none;
-  }
-}
-
 /* Typography. */
 header,
 section {
   position: relative;
-  padding: 3rem;
+  padding: 3rem 1rem;
   width: 100%;
 }
 
 header > *,
 section > * {
   max-width: var(--content-width);
-  margin-left: 20%;
+  margin-left: calc(50vw - 0.5 * var(--content-width));
 }
 
-@media screen and (max-width: 75rem) {
+@media screen and (min-width: 70rem) {
   header > *,
   section > * {
-    margin: 0;
-  }
-}
-
-@media screen and (min-width: 100rem) {header > *,
-  section > * {
     max-width: var(--content-width);
-    margin-left: 10%;
+    margin-left: calc(50vw - var(--content-width));
   }
 
   section > .filling {
@@ -264,11 +176,34 @@ header {
   position: relative;
   color: var(--cds-text-inverse);
   background-color: var(--cds-background-inverse);
+}
 
-  font-size: var(--cds-expressive-heading-03-font-size);
-  font-weight: var(--cds-expressive-heading-03-font-weight);
-  line-height: var(--cds-expressive-heading-03-line-height);
-  letter-spacing: var(--cds-expressive-heading-03-letter-spacing);
+header .counter > span {
+  color: #e6f3ff;
+  font-size: 2rem;
+  line-height: 2.5rem;
+  text-shadow: 0 0 0.25rem #cce6ff, 0 0 0.5rem #80c1ff, 0 0 0.75rem #80c1ff,
+    0 0 1rem #0084ff, 0 0 1.25rem #0084ff, 0 0 1.75rem #0084ff, 0 0 2rem #0084ff;
+}
+
+header p {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+header a {
+  color: var(--cds-link-inverse);
+}
+
+header a.button {
+  margin-left: auto;
+  max-width: 15rem;
+  margin-top: 3rem;
+
+  font-size: var(--cds-body-long-02-font-size);
+  font-weight: var(--cds-body-long-02-font-weight);
+  line-height: var(--cds-body-long-02-line-height);
+  letter-spacing: var(--cds-body-long-02-letter-spacing);
 }
 
 h1 {
@@ -280,7 +215,8 @@ h1 {
   letter-spacing: var(--cds-expressive-heading-05-letter-spacing);
 }
 
-h2 {
+h2,
+header p {
   font-size: var(--cds-expressive-heading-03-font-size);
   font-weight: var(--cds-expressive-heading-03-font-weight);
   line-height: var(--cds-expressive-heading-03-line-height);
@@ -294,11 +230,6 @@ h3 {
   font-weight: var(--cds-expressive-heading-02-font-weight);
   line-height: var(--cds-expressive-heading-02-line-height);
   letter-spacing: var(--cds-expressive-heading-02-letter-spacing);
-}
-
-aside a,
-header a {
-  color: var(--cds-link-inverse);
 }
 
 section:nth-child(even) {
@@ -372,7 +303,6 @@ a.button.inverse-ghost:hover {
 
 /* Collect. */
 .collect-sources {
-  max-width: var(--content-width);
   margin-top: 2rem;
   margin-bottom: 2rem;
   display: flex;
