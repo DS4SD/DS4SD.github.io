@@ -1,5 +1,15 @@
 [
   {
+    "year": "2023",
+    "publications": [
+      {
+        "venue": "ICDAR",
+        "title": "Optimized Table Tokenization for Table Structure Recognition",
+        "url": "https://arxiv.org/abs/2305.03393"
+      }
+    ]
+  },
+  {
     "year": "2022",
     "publications": [
       {
