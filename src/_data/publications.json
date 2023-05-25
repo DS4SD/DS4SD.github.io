@@ -4,6 +4,11 @@
     "publications": [
       {
         "venue": "ICDAR",
+        "title": "ICDAR 2023 Competition on Robust Layout Segmentation in Corporate Documents",
+        "url": "https://arxiv.org/abs/2305.14962"
+      },
+      {
+        "venue": "ICDAR",
         "title": "Optimized Table Tokenization for Table Structure Recognition",
         "url": "https://arxiv.org/abs/2305.03393"
       }
