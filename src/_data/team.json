@@ -7,7 +7,9 @@
   },
   {
     "firstName": "Diego",
-    "lastName": "Antognini"
+    "lastName": "Antognini",
+    "code": "diego-antognini",
+    "imageCode": "1477"
   },
   {
     "firstName": "Christoph",
@@ -41,7 +43,9 @@
   },
   {
     "firstName": "Francesco",
-    "lastName": "Fusco"
+    "lastName": "Fusco",
+    "code": "francesco-fusco",
+    "imageCode": "2914"
   },
   {
     "firstName": "Shubham",
