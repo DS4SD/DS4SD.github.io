@@ -11,6 +11,16 @@
         "venue": "ICDAR",
         "title": "Optimized Table Tokenization for Table Structure Recognition",
         "url": "https://arxiv.org/abs/2305.03393"
+      },
+      {
+        "venue": "ACL",
+        "title": "pNLP-Mixer: an Efficient all-MLP Architecture for Language",
+        "url": "https://arxiv.org/abs/2202.04350"
+      },
+      {
+        "venue": "ACL",
+        "title": "Extracting Text Representations for Terms and Phrases in Technical Domains",
+        "url": "https://arxiv.org/abs/2305.15867"
       }
     ]
   },
@@ -61,16 +71,6 @@
         "venue": "IPDPS",
         "title": "Stochastic Matrix-Function Estimators: Scalable Big-Data Kernels with High Performance",
         "url": "https://doi.org/10.1109/IPDPS.2016.34"
-      }
-    ]
-  },
-  {
-    "year": "",
-    "publications": [
-      {
-        "venue": "Submitted",
-        "title": "pNLP-Mixer: an Efficient all-MLP Architecture for Language",
-        "url": "https://arxiv.org/abs/2202.04350"
       }
     ]
   }
