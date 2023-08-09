@@ -317,10 +317,6 @@ table th {
   font-weight: bold;
 }
 
-table th .side-remark {
-  float: right;
-}
-
 table th,
 table td {
   padding: 0.5rem 1rem;
