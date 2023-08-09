@@ -193,6 +193,7 @@ header p {
 
 header a {
   color: var(--cds-link-inverse);
+  text-decoration: none;
 }
 
 header a.button {
