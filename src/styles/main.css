@@ -196,14 +196,7 @@ header a {
 }
 
 header a.button {
-  margin-left: auto;
-  max-width: 15rem;
-  margin-top: 3rem;
-
-  font-size: var(--cds-body-long-02-font-size);
-  font-weight: var(--cds-body-long-02-font-weight);
-  line-height: var(--cds-body-long-02-line-height);
-  letter-spacing: var(--cds-body-long-02-letter-spacing);
+  margin: 1rem 0;
 }
 
 h1 {
@@ -299,6 +292,42 @@ button.inverse-ghost:hover,
 a.button.inverse-ghost:hover {
   background-color: var(--cds-background-hover);
   border: 1px solid var(--cds-text-inverse);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+
+.button-group .button {
+  flex: 1;
+}
+
+/* Table. */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  line-height: 1rem;
+}
+
+table th {
+  text-align: left;
+  font-weight: bold;
+}
+
+table th .side-remark {
+  float: right;
+}
+
+table th,
+table td {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid var(--cds-border-strong);
+}
+
+table td:not(:first-child) {
+  max-width: 3rem;
 }
 
 /* Collect. */
