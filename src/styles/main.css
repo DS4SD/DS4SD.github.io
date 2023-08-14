@@ -323,10 +323,6 @@ table td {
   border-bottom: 1px solid var(--cds-border-strong);
 }
 
-table td:not(:first-child) {
-  max-width: 3rem;
-}
-
 /* Collect. */
 .collect-sources {
   margin-top: 2rem;
