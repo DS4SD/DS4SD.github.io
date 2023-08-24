@@ -8,6 +8,11 @@
         "url": "https://arxiv.org/abs/2308.12234"
       },
       {
+        "venue": "ACS",
+        "title": "PatCID: Large-scale chemical-structure database from images in patent documents",
+        "url": "https://research.ibm.com/publications/patcid-large-scale-chemical-structure-database-from-images-in-patent-documents"
+      },
+      {
         "venue": "ICDAR",
         "title": "ICDAR 2023 Competition on Robust Layout Segmentation in Corporate Documents",
         "url": "https://arxiv.org/abs/2305.14962"
