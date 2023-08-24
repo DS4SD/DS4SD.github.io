@@ -3,6 +3,11 @@
     "year": "2023",
     "publications": [
       {
+        "venue": "ICCV",
+        "title": "MolGrapher: Graph-based Visual Recognition of Chemical Structures",
+        "url": "https://arxiv.org/abs/2308.12234"
+      },
+      {
         "venue": "ICDAR",
         "title": "ICDAR 2023 Competition on Robust Layout Segmentation in Corporate Documents",
         "url": "https://arxiv.org/abs/2305.14962"
