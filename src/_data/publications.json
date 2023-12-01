@@ -1,5 +1,15 @@
 [
   {
+    "year": "2024",
+    "publications": [
+      {
+        "venue": "AAAI",
+        "title": "ESG Accountability Made Easy: DocQA at Your Service",
+        "url": "https://arxiv.org/abs/2311.18481"
+      }
+    ]
+  },
+  {
     "year": "2023",
     "publications": [
       {
