@@ -3,6 +3,11 @@
     "year": "2024",
     "publications": [
       {
+        "venue": "EarthArXiv",
+        "title": "Wealth over Woe: global biases in hydro-hazard research",
+        "url": "https://doi.org/10.31223/X5D687"
+      },      
+      {
         "venue": "AAAI",
         "title": "ESG Accountability Made Easy: DocQA at Your Service",
         "url": "https://arxiv.org/abs/2311.18481"
