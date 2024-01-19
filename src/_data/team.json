@@ -6,12 +6,6 @@
     "imageCode": "1940"
   },
   {
-    "firstName": "Diego",
-    "lastName": "Antognini",
-    "code": "diego-antognini",
-    "imageCode": "1477"
-  },
-  {
     "firstName": "Christoph",
     "lastName": "Auer",
     "code": "christoph-auer",
@@ -40,12 +34,6 @@
     "lastName": "Dinkla",
     "code": "kasper-dinkla",
     "imageCode": "4530"
-  },
-  {
-    "firstName": "Francesco",
-    "lastName": "Fusco",
-    "code": "francesco-fusco",
-    "imageCode": "2914"
   },
   {
     "firstName": "Shubham",
@@ -100,6 +88,12 @@
     "lastName": "Nassar",
     "code": "ahmed-nassar",
     "imageCode": "2439"
+  },
+  {
+    "firstName": "Rafael",
+    "lastName": "Teixeira de Lima",
+    "code": "rafael-teixeira-de-lima",
+    "imageCode": "16434"
   },
   {
     "firstName": "Panos",
