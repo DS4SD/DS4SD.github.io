@@ -6,7 +6,12 @@
         "venue": "EarthArXiv",
         "title": "Wealth over Woe: global biases in hydro-hazard research",
         "url": "https://doi.org/10.31223/X5D687"
-      },      
+      },
+      {
+        "venue": "AAAI",
+        "title": "Otter-Knowledge: benchmarks of multimodal knowledge graph representation learning from different sources for drug discovery",
+        "url": "https://arxiv.org/abs/2306.12802"
+      },
       {
         "venue": "AAAI",
         "title": "ESG Accountability Made Easy: DocQA at Your Service",
