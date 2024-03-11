@@ -19,10 +19,10 @@ title: IBM Deep Search
         documents have been converted by our open access system. Try it yourself for free or request access to an enterprise system.
         <div class="button-group">
             <a class="button" href="https://deepsearch-experience.res.ibm.com">
-                Try for free <img src="/icons/arrow-right.svg"/>
+                Free access <img src="/icons/arrow-right.svg"/>
             </a>
             <a class="button inverse-ghost" href="https://airtable.com/appFvft8QiHQbGa9d/shr3aE6NX74XTWnaG">
-                Get enterprise access
+                Enterprise access
                 <img src="/icons/arrow-right.svg"/>
             </a>
         </div>
@@ -235,8 +235,8 @@ title: IBM Deep Search
         several technologies from different AI disciplines consisting of document
         conversion to machine-readable format (via computer vision), finding relevant data (via natural language processing),
         and formulating an eloquent response (via large language models). A research paper describing this application is published
-        at the AAAI 2024 conference.
-        <a href="mailto:deepsearch-core@zurich.ibm.com">Contact us</a>
+        at the AAAI 2024 conference. Read more about it <a href="https://research.ibm.com/blog/ai-deep-search-docqa">here</a> and
+        <a href="mailto:deepsearch-core@zurich.ibm.com">contact us</a>
         for early access.
     </p>
     <div>
@@ -247,7 +247,7 @@ title: IBM Deep Search
     <h2>Publications</h2>
     {% for batch in publications %}
         <h3>{{ batch.year }}</h3>
-        <div class="publications filling">
+        <div class="publications">
             {% for publication in batch.publications %}
                 <a href="{{ publication.url }}">
                     <div class="venue">{{ publication.venue }}</div>
@@ -267,7 +267,7 @@ title: IBM Deep Search
         with your résumé and interests.
     </p>
     <h3>Team</h3>
-    <div class="team filling">
+    <div class="team">
         {% for person in team %}
             <a {% if person.code %} href="https://research.ibm.com/people/{{ person.code }}" {% endif %}>
                 {% if person.imageCode %}
@@ -284,21 +284,21 @@ title: IBM Deep Search
         {% endfor %}
     </div>
     <h3>Locations</h3>
-    <div class="locations filling">
+    <div class="locations">
         <div>
-            <img class="zurich" src="/images/zurich.jpg"/>
+            <img src="/images/zurich.jpg"/>
             <div>
                 Zürich
                 <b>Switzerland</b>
-                <a href="https://goo.gl/maps/CDB5oSPWdiEnExFu9"><img src="/icons/location.svg"/>
+                <a class="pin" href="https://goo.gl/maps/CDB5oSPWdiEnExFu9"><img src="/icons/location.svg"/>
                 </a>
             </div>
         </div>
         <div>
-            <img class="paris" src="/images/paris.jpg"/>
+            <img src="/images/paris.jpg"/>
             <div>Paris
                 <b>France</b>
-                <a href="https://goo.gl/maps/QP86noMQSm8rP75r7"><img src="/icons/location.svg"/>
+                <a class="pin" href="https://goo.gl/maps/QP86noMQSm8rP75r7"><img src="/icons/location.svg"/>
                 </a>
             </div>
         </div>

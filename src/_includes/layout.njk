@@ -10,35 +10,46 @@
             gtag('js', new Date());
             gtag('config', 'G-8WR82RYJQL');
         </script>
+       
+        <title>{{ title }}</title>
+        <link rel="icon" href="/icons/logo.svg" type="image/svg+xml">
+        
+        <meta property="og:title" content="{{ title }}" >
+        <meta property="og:description" content="Deep Search leverages state-of-the-art AI methods to continuously collect, convert, enrich, and link large document collections. You can use it for both public and proprietary PDF documents. Deep Search is offered commercially as-a-service." />
+        <meta property="og:image" content="https://ds4sd.github.io/icons/logo.svg" />
+
         <meta charset="UTF-8">
         <meta name="HandheldFriendly" content="true"/>
         <meta name="MobileOptimized" content="320"/>
         <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, width=device-width, user-scalable=no"/>
+
+
         <link rel="stylesheet" href="/styles/main.css">
-        <link rel="icon" href="/icons/logo.svg" type="image/svg+xml">
-        <title>{{ title }}</title>
     </head>
     <body>
         <nav>
             <div class="logo">
-                <img src="/icons/logo.svg"/> IBM
-                <b>Deep Search</b>
+                <img src="/icons/logo.svg"/>
+                <span>IBM <b>Deep Search</b></span>
             </div>
-            <a href="#overview">
-                Overview
-            </a>
-            <a href="#toolkit">
-                Toolkit
-            </a>
-            <a href="#use-cases">
-                Cases
-            </a>
-            <a href="#publications">
-                Publications
-            </a>
-            <a href="#people">
-                People
-            </a>
+
+            <div class="sections">
+                <a href="#overview">
+                    Overview
+                </a>
+                <a href="#toolkit">
+                    Toolkit
+                </a>
+                <a href="#use-cases">
+                    Cases
+                </a>
+                <a href="#publications">
+                    Publications
+                </a>
+                <a href="#people">
+                    People
+                </a>
+            </div>
 
             <div class="actions">
                 <a href="mailto:deepsearch-core@zurich.ibm.com">
