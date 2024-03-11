@@ -21,7 +21,7 @@ html {
 }
 
 body {
-  --content-width: 35rem;
+  --content-width: 40rem;
 
   background-color: var(--cds-background);
 
@@ -47,8 +47,6 @@ nav {
 
 nav div,
 nav a {
-  padding: 0 1rem;
-
   font-size: 0.875rem;
   color: var(--cds-text);
   text-decoration: none;
@@ -56,45 +54,59 @@ nav a {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.25rem;
 }
 
-nav > a {
+nav a {
   flex: 1;
-  max-width: 6rem;
+  min-width: 0;
+  padding: 0 1rem;
+  overflow-x: hidden;
 }
 
-nav > a:hover {
+nav a:hover {
   background-color: var(--cds-layer-hover);
 }
 
-nav div:first-child {
-  padding: 0 3rem 0 0;
-  gap: 0.25rem;
+nav .logo {
+  padding: 1rem;
+  margin-right: auto;
+  gap: 1rem;
 }
 
 nav .logo > img {
-  margin: 0 0.5rem 0 0.75rem;
   width: 1.5rem;
   height: 1.5rem;
 }
 
-.actions {
-  margin-left: auto;
+nav .sections {
+  flex: 1;
+  min-width: 0;
+  max-width: var(--content-width);
+  align-items: stretch;
+  justify-content: flex-start;
 }
 
-.actions img {
+nav .actions {
+  margin-left: auto;
+  align-items: stretch;
+}
+
+nav .actions img {
   margin-right: 0.25rem;
 }
 
-@media screen and (max-width: 75rem) {
+@media (max-width: 50rem) {
   nav .logo {
     display: none;
   }
 
-  nav a {
+  nav .sections > a {
+    flex: 1 1 auto;
     min-width: 0;
-    padding: 1rem;
+    overflow-x: hidden;
+    padding: 0 0.5rem;
+    justify-content: flex-start;
+    mask-image: linear-gradient(90deg, var(--cds-layer) 75%, transparent);
   }
 
   nav a span {
@@ -127,6 +139,7 @@ footer {
   letter-spacing: var(--cds-body-short-01-letter-spacing);
 
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 
@@ -157,19 +170,11 @@ section {
 header > *,
 section > * {
   max-width: var(--content-width);
-  margin-left: calc(50vw - 0.5 * var(--content-width));
 }
 
-@media screen and (min-width: 70rem) {
-  header > *,
-  section > * {
-    max-width: var(--content-width);
-    margin-left: calc(50vw - var(--content-width));
-  }
-
-  section > .filling {
-    max-width: calc(2 * var(--content-width));
-  }
+header > *,
+section > * {
+  margin: 0 auto;
 }
 
 header {
@@ -252,10 +257,6 @@ blockquote {
   font-style: italic;
 }
 
-.secondary {
-  color: var(--cds-);
-}
-
 /* Controls. */
 button,
 a.button {
@@ -298,7 +299,7 @@ a.button.inverse-ghost:hover {
 .button-group {
   display: flex;
   flex-direction: row;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 .button-group .button {
@@ -309,7 +310,6 @@ a.button.inverse-ghost:hover {
 table {
   width: 100%;
   border-collapse: collapse;
-  line-height: 1rem;
 }
 
 table th {
@@ -329,6 +329,7 @@ table td {
   margin-bottom: 2rem;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 3rem;
 }
 
@@ -358,7 +359,7 @@ table td {
 .publications > a {
   position: relative;
   width: var(--card-size);
-  height: var(0.75 * --card-size);
+  min-height: var(0.75 * --card-size);
   padding: 1rem;
   overflow: hidden;
 
@@ -378,6 +379,12 @@ table td {
   flex-direction: column;
   align-items: center;
   gap: 1rem;
+}
+
+@media (max-width: 50rem) {
+  .publications > a {
+    width: 100%;
+  }
 }
 
 .publications > a:hover {
@@ -445,19 +452,18 @@ table td {
   margin-bottom: 1rem;
 
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   align-items: stretch;
   gap: 1rem;
 }
 
 .locations > div {
-  max-width: 27rem;
-
   background-color: var(--cds-background-inverse);
   color: var(--cds-text-inverse);
 
   display: flex;
   flex-direction: column;
+  align-items: stretch;
 }
 
 .locations > div > div {
@@ -469,18 +475,15 @@ table td {
   gap: 1rem;
 }
 
-.locations > div > div > a {
+.locations .pin {
+  margin-left: auto;
+}
+
+.locations .pin:hover {
+  background-color: var(--cds-background-inverse-hover);
+}
+
+.locations .pin > img {
   width: 3rem;
   height: 3rem;
-  margin-left: auto;
-  background-color: var(--cds-layer);
-}
-
-.locations > div > div > a > img {
-  width: 100%;
-  height: 100%;
-}
-
-.locations > div > div > a:hover {
-  background-color: var(--cds-layer-hover);
 }
