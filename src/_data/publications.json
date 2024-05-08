@@ -3,6 +3,11 @@
     "year": "2024",
     "publications": [
       {
+        "venue": "EGU",
+        "title": "Identifying global biases in hydro-hazard research by mining the scientific literature",
+        "url": "https://doi.org/10.5194/egusphere-egu24-8752"
+      },
+      {
         "venue": "EarthArXiv",
         "title": "Wealth over Woe: global biases in hydro-hazard research",
         "url": "https://doi.org/10.31223/X5D687"
