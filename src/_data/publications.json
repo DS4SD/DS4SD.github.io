@@ -3,6 +3,11 @@
     "year": "2024",
     "publications": [
       {
+        "venue": "ACL",
+        "title": "Statements: Universal Information Extraction from Tables with Large Language Models for ESG KPIs",
+        "url": "https://arxiv.org/abs/2406.19102"
+      },
+      {
         "venue": "EGU",
         "title": "Identifying global biases in hydro-hazard research by mining the scientific literature",
         "url": "https://doi.org/10.5194/egusphere-egu24-8752"
