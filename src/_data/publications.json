@@ -3,6 +3,16 @@
     "year": "2024",
     "publications": [
       {
+        "venue": "arXiv",
+        "title": "Docling Technical Report",
+        "url": "https://arxiv.org/abs/2408.09869"
+      },
+      {
+        "venue": "Nat Comm",
+        "title": "PatCID: an open-access dataset of chemical structures in patent documents",
+        "url": "https://doi.org/10.1038/s41467-024-50779-y"
+      },
+      {
         "venue": "ACL",
         "title": "Statements: Universal Information Extraction from Tables with Large Language Models for ESG KPIs",
         "url": "https://arxiv.org/abs/2406.19102"
