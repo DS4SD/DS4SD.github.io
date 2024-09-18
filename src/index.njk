@@ -277,7 +277,7 @@ title: IBM Deep Search
         <a href="mailto:deepsearch-core@zurich.ibm.com">Contact us</a>
         with your résumé and interests.
     </p>
-    <h3>Team</h3>
+    <h3>Team members</h3>
     <div class="team">
         {% for person in team %}
             <a {% if person.code %} href="https://research.ibm.com/people/{{ person.code }}" {% endif %}>
@@ -292,6 +292,24 @@ title: IBM Deep Search
                     <b>{{ person.lastName }}</b>
                 </div>
             </a>
+        {% endfor %}
+    </div>
+    <h3>Past members</h3>
+    <div class="past">
+        {% for person in past_members %}
+            <div>
+                <div>{{ person.firstName }}</div>
+                <b>{{ person.lastName }}</b>
+            </div>
+        {% endfor %}
+    </div>
+    <h3>Past students</h3>
+    <div class="past">
+        {% for person in past_students %}
+            <div>
+                <div>{{ person.firstName }}</div>
+                <b>{{ person.lastName }}</b>
+            </div>
         {% endfor %}
     </div>
     <h3>Locations</h3>
