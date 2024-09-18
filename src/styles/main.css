@@ -404,7 +404,8 @@ table td {
   position: relative;
 }
 
-.team {
+.team,
+.past {
   --card-size: 7rem;
   margin-top: 1rem;
 
@@ -444,6 +445,14 @@ table td {
 
   display: flex;
   flex-direction: column;
+}
+
+.past > div {
+  width: var(--card-size);
+  height: var(--card-size);
+  padding: 1rem;
+
+  background-color: var(--cds-background);
 }
 
 /* Locations. */
