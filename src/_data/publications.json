@@ -3,6 +3,11 @@
     "year": "2025",
     "publications": [
       {
+        "venue": "AAAI",
+        "title": "Docling: An Efficient Open-Source Toolkit for AI-driven Document Conversion",
+        "url": "https://arxiv.org/abs/2501.17887"
+      },
+      {
         "venue": "COLING",
         "title": "Know Your RAG: Dataset Taxonomy and Generation Strategies for Evaluating RAG Systems",
         "url": "https://doi.org/10.48550/arXiv.2411.19710"
